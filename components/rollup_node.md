@@ -44,7 +44,7 @@ One of the main goal of the rollup client is to use the execution engine without
 
 ### Miner
 
-The miner assembles the block via the Execution Engine. It injects context transactions that update the light client to the canon chain and it inject new deposit transactions. It submits the transaction batch to and waits until the transaction is mined (potentially bumping fee price if needed). 
+The miner assembles the block via the Execution Engine. It injects context transactions that update the light client to the canon chain and it inject new deposit transactions. It submits the transaction batch to and waits until the transaction is mined (potentially bumping fee price if needed).
 
 #### Database
 
@@ -55,7 +55,7 @@ The database persists the rollup chain and indexed data from the canon chain.  P
 The Rollup Node should provide proxied access to the Execution Engine's networking stack. This allows for two main things:
 
 * Context updates and deposits are injected into the execution engine via transactions. This means that it's possible for the Execution Engine to receive signed system updates in the public mempool. This could cause block producing rollup nodes to submit bundles with invalid contexts/deposits.
-* To provide fast-confirmations, a group of rollup block producers can define a "unconfirmed" blocks that haven't yet been submitted to mainnet (but will likely be in the near future). 
+* To provide fast-confirmations, a group of rollup block producers can define a "unconfirmed" blocks that haven't yet been submitted to mainnet (but will likely be in the near future).
 
 [execution-spec]: https://github.com/ethereum/execution-specs
 [execution-engine-rpc]: https://hackmd.io/@n0ble/consensus_api_design_space
